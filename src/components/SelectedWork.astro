@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import ArrowUpRight from './ArrowUpRight.astro';
+import schole from '../assets/work/schole-after.jpg';
+import mobile from '../assets/work/schole-mobile.jpg';
+import library from '../assets/work/mylib-browse.jpg';
+import reader from '../assets/work/mylib-reader.jpg';
+import shop from '../assets/work/shop-after.jpg';
+import before from '../assets/work/shop-before.jpg';
+import schools from '../assets/work/shop-school.jpg';
+const projects = [
+ {title:'From a long list to a useful finder.', organization:'Scholé Academy · WordPress', image:schole, alt:'Scholé course finder with keyword search, filters and course cards.', problem:'Families needed an easier way to find courses and the people teaching them.', contribution:'I designed and built a filterable course finder and searchable instructor directory within the existing WordPress site. Course cards bring schedules and instructor information into view; shareable filter links let families return to a useful search.', outcome:'Course discovery works on desktop and mobile while staff continue maintaining their records in Airtable. A colleague extended the existing data-sync plugin.', url:'https://scholeacademy.com/courses/', link:'Explore the course finder', gallery:[{image:mobile,alt:'Mobile course finder with a Filters button and course results.',caption:'The mobile layout puts filtering within reach without crowding the results.'}]},
+ {title:'Open the library. Repair the connections.', organization:'MyLibrary · Classical Academic Press', image:library, alt:'MyLibrary public catalog with book covers, subject filters and search.', problem:'A login wall hid the catalog, and gaps between purchasing and account creation made access difficult for customers.', contribution:'I opened browsing and search to guests, repaired account provisioning and synchronization, and built an in-browser ebook reader within the existing application.', outcome:'Visitors can discover content before signing in. Purchases and access-card claims connect to account creation, and the reader adds a new way to access digital books.', url:'https://library.classicalacademicpress.com/', link:'Explore MyLibrary', gallery:[{image:reader,alt:'MyLibrary browser-based ebook reader showing a book page and reading controls.',caption:'An in-browser reader adds page navigation, zoom and remembered reading position.'}]},
+ {title:'A refreshed storefront. A clearer path for schools.', organization:'Classical Academic Press · Shopify', image:shop, alt:'Classical Academic Press storefront with updated navigation and curriculum discovery.', problem:'An aging, heavily customized theme was difficult to maintain, and schools needed a dedicated purchasing experience.', contribution:'I migrated the storefront to a licensed theme selected by leadership, preserving content and custom workflows. I enabled modern customer accounts and built the School Accounts experience, including purchasing rules for school buyers.', outcome:'The storefront has updated discovery tools and a dedicated school-purchasing path. Customizations are documented for future maintenance. A colleague contributed some theme edits.', url:'https://classicalacademicpress.com/pages/school-accounts', link:'Explore School Accounts', gallery:[{image:before,alt:'Earlier Classical Academic Press storefront homepage.',caption:'Before: the previous storefront, captured by the Internet Archive on December 5, 2025.'},{image:schools,alt:'School Accounts landing page with purchasing information for schools and co-ops.',caption:'After: a dedicated, staff-editable landing page for school and co-op purchasing.'}]}
+];
+---
+<section id="work" class="selected-work">
+  <div class="section-heading"><span class="eyebrow">SELECTED WORK</span><h2>Practical changes.<br />Working software.</h2></div>
+  <p class="work-attribution">These projects were completed in my role as an employee of Classical Academic Press, before and separately from engagements through Endicott Digital Systems LLC.</p>
+  <div class="work-grid">
+    {projects.map(project => <article class="work-card">
+      <Image src={project.image} alt={project.alt} widths={[480,800,1200]} sizes="(max-width: 760px) 90vw, 28vw" loading="lazy" class="work-cover" format="webp" />
+      <div class="work-card-copy"><p class="work-meta">{project.organization}</p><h3>{project.title}</h3><p>{project.problem}</p>
+      <details><summary>Read the case study <ArrowUpRight /></summary><div class="work-expanded"><h4>My contribution</h4><p>{project.contribution}</p><h4>What changed</h4><p>{project.outcome}</p>
+        <div class="work-gallery">{project.gallery.map(item => <figure><Image src={item.image} alt={item.alt} widths={[480,800,1200]} sizes="(max-width: 760px) 85vw, 26vw" loading="lazy" format="webp" /><figcaption>{item.caption}</figcaption></figure>)}</div>
+        <a class="work-link" href={project.url}>{project.link} <ArrowUpRight /></a>
+      </div></details></div>
+    </article>)}
+  </div>
+  <p class="work-note">Screenshots show the projects as captured in September 2026, except where noted. Live sites may change.</p>
+</section>

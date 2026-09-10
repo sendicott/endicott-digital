@@ -31,6 +31,7 @@ export interface NavLink {
 }
 
 export const navLinks: readonly NavLink[] = [
+  { href: '#work', label: 'Selected work' },
   { href: '#services', label: 'What we do' },
   { href: '#approach', label: 'How we work' },
   { href: '#contact', label: 'Let’s talk', arrow: true },

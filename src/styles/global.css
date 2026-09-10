@@ -366,3 +366,26 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Selected work */
+.selected-work { padding-top: 80px; padding-bottom: 80px; background: #eee8d8; border-top: 1px solid var(--line); }
+.work-attribution { max-width: 780px; margin: 0 0 36px; font-size: 16px; }
+.work-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; align-items: start; }
+.work-card { background: #faf7ef; border: 1px solid #c9bea6; overflow: hidden; }
+.work-cover { display: block; width: 100%; height: auto; aspect-ratio: 16/10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
+.work-card-copy { padding: 24px; }
+.work-meta { font-size: 12px; color: #765719; margin-bottom: 12px; }
+.work-card h3 { font-family: Georgia,serif; font-size: 28px; font-weight: 500; line-height: 1.2; margin-bottom: 16px; }
+.work-card p { font-size: 15px; }
+.work-card summary { cursor: pointer; padding: 20px 0 0; font-size: 15px; font-weight: 700; }
+.work-card summary:focus-visible { outline: 3px solid #ed9200; outline-offset: 5px; }
+.work-card summary svg { margin-left: 8px; }
+.work-expanded h4 { margin: 22px 0 8px; font-size: 15px; }
+.work-gallery { display: grid; gap: 18px; margin: 24px 0; }
+.work-gallery figure { margin: 0; }
+.work-gallery img { display: block; width: 100%; max-height: 420px; object-fit: contain; object-position: left top; height: auto; background: white; }
+.work-gallery figcaption { font-size: 12px; line-height: 1.5; margin-top: 8px; color: var(--muted); }
+.work-link { font-size: 14px; }
+.work-note { margin-top: 24px; font-size: 12px; }
+@media(max-width: 1000px) { .work-grid { grid-template-columns: 1fr; } .work-card-copy { padding: 28px; } .work-cover { max-height: 420px; } .work-gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width: 760px) { .selected-work { padding-top: 55px; padding-bottom: 55px; } .work-gallery { grid-template-columns: 1fr; } .work-card-copy { padding: 22px; } }
