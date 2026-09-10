@@ -1,0 +1,19 @@
+---
+import { steps } from '../data/site';
+---
+
+<section id="approach" class="approach">
+  <div class="section-heading">
+    <span class="eyebrow">03 / HOW WE WORK</span>
+    <h2>Clear scope.<br />Visible progress.</h2>
+  </div>
+  <div class="steps">
+    {steps.map(({ label, title, description }) => (
+      <article>
+        <span>{label}</span>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </article>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,25 @@
+---
+/**
+ * The "New Growth" wordmark: logo mark + serif brand name.
+ * Used in the header (60×66 mark) and footer (52×60 mark, via .footer-brand).
+ */
+import { Image } from 'astro:assets';
+import logo from '../assets/new-growth.png';
+import { site } from '../data/site';
+
+interface Props {
+  variant?: 'header' | 'footer';
+}
+
+const { variant = 'header' } = Astro.props;
+---
+
+<a
+  class:list={['wordmark', { 'footer-brand': variant === 'footer' }]}
+  href="#"
+  aria-label={`${site.name} home`}
+>
+  {/* Decorative mark: the brand name beside it carries the meaning. */}
+  <Image src={logo} alt="" width={64} densities={[1, 2, 3]} loading="eager" decoding="async" />
+  <span class="brand-name">Endicott<span>DIGITAL SYSTEMS</span></span>
+</a>

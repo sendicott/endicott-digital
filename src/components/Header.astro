@@ -1,0 +1,13 @@
+---
+import Wordmark from './Wordmark.astro';
+import { navLinks } from '../data/site';
+---
+
+<header>
+  <Wordmark />
+  <nav aria-label="Main navigation">
+    {navLinks.map(({ href, label, arrow }) => (
+      <a href={href}>{label}{arrow && <> <span aria-hidden="true">↗</span></>}</a>
+    ))}
+  </nav>
+</header>

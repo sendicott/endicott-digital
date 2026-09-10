@@ -1,0 +1,15 @@
+---
+import { contact, inquiryMailto } from '../data/site';
+---
+
+<section id="contact" class="contact">
+  <span class="eyebrow">04 / LET’S TALK</span>
+  <h2>What’s getting<br />in your way?</h2>
+  <div class="contact-bottom">
+    <p>A dated application, a difficult migration or a workflow that needs to work better. Tell me what you’re trying to change.</p>
+    <div>
+      <a class="email" href={inquiryMailto}>Email Scott <span aria-hidden="true">↗</span></a>
+      <a class="phone" href={contact.phoneHref}>{contact.phoneDisplay}</a>
+    </div>
+  </div>
+</section>

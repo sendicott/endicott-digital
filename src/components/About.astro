@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import portrait from '../assets/scott-portrait.png';
+import { priorExperience } from '../data/site';
+---
+
+<section class="about">
+  <div>
+    <span class="eyebrow">02 / THE PERSON BEHIND THE WORK</span>
+    <h2>Direct access to<br />your developer.</h2>
+    <Image
+      class="portrait"
+      src={portrait}
+      alt="Scott Endicott, founder of Endicott Digital Systems"
+      width={280}
+      height={280}
+      densities={[1, 2, 3]}
+      loading="lazy"
+      decoding="async"
+    />
+  </div>
+  <div class="about-copy">
+    <p class="large">I’m Scott Endicott, founder of Endicott Digital Systems.</p>
+    <p>My experience spans digital libraries, learning platforms, commerce and customer-account migrations. I bring that practical background to organizations ready to improve the software they use every day.</p>
+    <p>You work directly with me from the first conversation through implementation and handoff.</p>
+    <div class="experience">
+      <span>SELECTED PRIOR EXPERIENCE</span>
+      <p>
+        {priorExperience.map((line, i) => (
+          <>{i > 0 && <br />}{line}</>
+        ))}
+      </p>
+      <small>Experience from Scott’s previous work; not a list of LLC client engagements.</small>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import { services } from '../data/site';
+---
+
+<section id="services" class="services">
+  <div class="section-intro">
+    <span class="eyebrow">01 / WHAT WE DO</span>
+    <h2>A better next chapter<br />for your software.</h2>
+    <p>You don’t always need to start over. We help you find the right change, then build it around the way your organization works.</p>
+  </div>
+  <div class="service-list">
+    {services.map(({ number, title, description }) => (
+      <article>
+        <span class="number">{number}</span>
+        <div>
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

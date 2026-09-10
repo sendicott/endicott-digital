@@ -1,0 +1,13 @@
+---
+import Wordmark from './Wordmark.astro';
+import { contact, site } from '../data/site';
+---
+
+<footer>
+  <Wordmark variant="footer" />
+  <div class="footer-details">
+    <span>© {site.copyrightYear} {site.legalName}</span>
+    <span>{site.location}</span>
+    <a href={`mailto:${contact.email}`}>Contact Scott</a>
+  </div>
+</footer>
