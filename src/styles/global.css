@@ -288,7 +288,7 @@ nav a:last-child { color: var(--blue); font-weight: 700; }
   letter-spacing: -1px;
   color: #f1cd81;
 }
-.email span { margin-left: 45px; }
+.email .arrow-icon { margin-left: 45px; }
 .phone {
   display: inline-block;
   margin-top: 10px;

@@ -1,4 +1,5 @@
 ---
+import ArrowUpRight from './ArrowUpRight.astro';
 import { contact, inquiryMailto } from '../data/site';
 ---
 
@@ -8,7 +9,7 @@ import { contact, inquiryMailto } from '../data/site';
   <div class="contact-bottom">
     <p>A dated application, a difficult migration or a workflow that needs to work better. Tell me what you’re trying to change.</p>
     <div>
-      <a class="email" href={inquiryMailto}>Email Scott <span aria-hidden="true">↗</span></a>
+      <a class="email" href={inquiryMailto}>Email Scott <ArrowUpRight /></a>
       <a class="phone" href={contact.phoneHref}>{contact.phoneDisplay}</a>
     </div>
   </div>
