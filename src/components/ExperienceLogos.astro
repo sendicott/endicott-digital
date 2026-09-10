@@ -1,0 +1,44 @@
+---
+import { Image } from 'astro:assets';
+import schole from '../assets/brands/schole.png';
+import cap from '../assets/brands/cap.png';
+import classicalu from '../assets/brands/classicalu.png';
+import bestcolleges from '../assets/brands/bestcolleges.png';
+import nursejournal from '../assets/brands/nursejournal.png';
+import gsk from '../assets/brands/gsk.png';
+import cnet from '../assets/brands/cnet.svg';
+import zdnet from '../assets/brands/zdnet.svg';
+import thebestschools from '../assets/brands/thebestschools.svg';
+const brands = [
+ {name:'Scholé Academy',logo:schole,url:'https://scholeacademy.com'},
+ {name:'Classical Academic Press',logo:cap,url:'https://classicalacademicpress.com'},
+ {name:'ClassicalU',logo:classicalu,url:'https://classicalu.com'},
+ {name:'BestColleges.com',logo:bestcolleges,url:'https://www.bestcolleges.com'},
+ {name:'NurseJournal.org',logo:nursejournal,url:'https://nursejournal.org'},
+ {name:'GSK',logo:gsk,url:'https://www.gsk.com',compact:true},
+ {name:'CNET',logo:cnet,url:'https://www.cnet.com',compact:true},
+ {name:'ZDNET',logo:zdnet,url:'https://www.zdnet.com',compact:true},
+ {name:'TheBestSchools.org',logo:thebestschools,url:'https://thebestschools.org'},
+];
+---
+<section class="experience-brands" aria-labelledby="experience-brands-title">
+  <h2 id="experience-brands-title">Experience across education, publishing &amp; technology.</h2>
+  <p>Organizations and brands I’ve worked with throughout my career, including work in prior and current employee roles.</p>
+  <ul class="brand-grid" role="list">
+    {brands.map(brand => <li><a href={brand.url} class:list={['brand-link',{'brand-compact':brand.compact}]}><Image src={brand.logo} alt={brand.name} width={brand.compact ? 212 : 420} loading="lazy" /></a></li>)}
+  </ul>
+  <p class="brand-context">Shown as professional experience, not endorsements or a list of Endicott Digital Systems LLC clients.</p>
+</section>
+<style>
+.experience-brands { padding-top: 42px; padding-bottom: 42px; border-top: 1px solid var(--line); }
+.experience-brands h2 { font-size: 20px; letter-spacing: -.3px; line-height: 1.4; margin: 0 0 8px; }
+.experience-brands > p { font-size: 14px; max-width: 740px; }
+.brand-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 20px 30px; padding: 0; margin: 30px 0 24px; list-style: none; }
+.brand-link { display: flex; justify-content: center; align-items: center; min-height: 72px; padding: 12px; border-radius: 3px; }
+.brand-link:hover { background: #eee8d8; }
+.brand-link img { display: block; width: 100%; max-width: 190px; height: 44px; object-fit: contain; }
+.brand-compact img { max-width: 106px; height: 36px; }
+.experience-brands .brand-context { font-size: 12px; }
+@media(max-width:1000px) { .brand-grid { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media(max-width:540px) { .brand-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; } .brand-link { padding: 8px; } .experience-brands h2 { font-size: 19px; } }
+</style>
