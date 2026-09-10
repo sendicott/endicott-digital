@@ -11,3 +11,5 @@ Official website header assets, retrieved September 10, 2026. Used to identify o
 - cnet: https://www.cnet.com (header SVG)
 - zdnet: https://www.zdnet.com (header SVG)
 - thebestschools: https://thebestschools.org (header SVG)
+- redventures: https://images.squarespace-cdn.com/content/v1/654919a35e853e44ee872dcf/469a2288-38ed-4a89-af24-650c80f151ee/RV-Primary-Glyph-reg.png?format=1500w
+- ziffdavis: https://www.ziffdavis.com (header SVG)

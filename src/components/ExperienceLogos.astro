@@ -9,7 +9,11 @@ import gsk from '../assets/brands/gsk.png';
 import cnet from '../assets/brands/cnet.svg';
 import zdnet from '../assets/brands/zdnet.svg';
 import thebestschools from '../assets/brands/thebestschools.svg';
+import redventures from '../assets/brands/redventures.png';
+import ziffdavis from '../assets/brands/ziffdavis.svg';
 const brands = [
+ {name:'Red Ventures',logo:redventures,url:'https://www.redventures.com',compact:true},
+ {name:'Ziff Davis',logo:ziffdavis,url:'https://www.ziffdavis.com',compact:true},
  {name:'Scholé Academy',logo:schole,url:'https://scholeacademy.com'},
  {name:'Classical Academic Press',logo:cap,url:'https://classicalacademicpress.com'},
  {name:'ClassicalU',logo:classicalu,url:'https://classicalu.com'},
@@ -25,7 +29,7 @@ const brands = [
   <h2 id="experience-brands-title">Experience across education, publishing &amp; technology.</h2>
   <p>Organizations and brands I’ve worked with throughout my career, including work in prior and current employee roles.</p>
   <ul class="brand-grid" role="list">
-    {brands.map(brand => <li><a href={brand.url} class:list={['brand-link',{'brand-compact':brand.compact}]}><Image src={brand.logo} alt={brand.name} width={brand.compact ? 212 : 420} loading="lazy" /></a></li>)}
+    {brands.map(brand => <li><a href={brand.url} class:list={['brand-link',{'brand-compact':brand.compact}]}><Image src={brand.logo} alt={brand.name} width={brand.compact ? 212 : 420} loading="lazy" />{brand.name === 'Red Ventures' && <span>Red Ventures</span>}</a></li>)}
   </ul>
   <p class="brand-context">Shown as professional experience, not endorsements or a list of Endicott Digital Systems LLC clients.</p>
 </section>
@@ -35,6 +39,8 @@ const brands = [
 .experience-brands > p { font-size: 14px; max-width: 740px; }
 .brand-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 20px 30px; padding: 0; margin: 30px 0 24px; list-style: none; }
 .brand-link { display: flex; justify-content: center; align-items: center; min-height: 72px; padding: 12px; border-radius: 3px; }
+.brand-link:has(span) { flex-direction: column; gap: 4px; }
+.brand-link span { font-size: 12px; font-weight: 700; }
 .brand-link:hover { background: #eee8d8; }
 .brand-link img { display: block; width: 100%; max-width: 190px; height: 44px; object-fit: contain; }
 .brand-compact img { max-width: 106px; height: 36px; }
