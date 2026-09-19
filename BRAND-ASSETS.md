@@ -13,3 +13,7 @@ Official website header assets, retrieved September 10, 2026. Used to identify o
 - thebestschools: https://thebestschools.org (header SVG)
 - redventures: https://images.squarespace-cdn.com/content/v1/654919a35e853e44ee872dcf/469a2288-38ed-4a89-af24-650c80f151ee/RV-Primary-Glyph-reg.png?format=1500w
 - ziffdavis: https://www.ziffdavis.com (header SVG)
+- accounting: https://res.cloudinary.com/highereducation/image/upload/v1745502525/a0462de89b5537a1919476dae23c8694.svg (retrieved September 18, 2026)
+- computerscience: https://res.cloudinary.com/highereducation/image/upload/v1644334165/ComputerScience.org-Sonic/logos/logo.svg (retrieved September 18, 2026)
+- psychology: https://res.cloudinary.com/highereducation/image/upload/v1778592190/Psychology.org/logos/Psychology_Brand_Logos.svg (retrieved September 18, 2026)
+- onlinemba: https://www.onlinemba.com/wp-content/themes/sonic-ui-theme-child/assets/dist/img/logo-header.svg (retrieved September 18, 2026)
